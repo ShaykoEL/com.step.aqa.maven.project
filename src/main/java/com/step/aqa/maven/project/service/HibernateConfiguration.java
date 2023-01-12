@@ -5,8 +5,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
+import org.hibernate.service.ServiceRegistry;
 
-import javax.imageio.spi.ServiceRegistry;
+
 import java.util.Properties;
 
 public class HibernateConfiguration {
@@ -20,7 +21,7 @@ public class HibernateConfiguration {
                 // Hibernate settings equivalent to hibernate.cfg.xml's properties
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/abc?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+                settings.put(Environment.URL, "jdbc:mysql://localhost:3306/hospital?useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
                 settings.put(Environment.USER, "root");
                 settings.put(Environment.PASS, "root");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
@@ -34,7 +35,7 @@ public class HibernateConfiguration {
                 configuration.setProperties(settings);
 
                 configuration.addAnnotatedClass(Diseases.class);
-                configuration.addAnnotatedClass(Departments.class);
+                configuration.addAnnotatedClass(Department.class);
                 configuration.addAnnotatedClass(Doctors.class);
                 configuration.addAnnotatedClass(Examinations.class);
                 configuration.addAnnotatedClass(Wards.class);

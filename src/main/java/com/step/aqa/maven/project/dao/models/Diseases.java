@@ -1,13 +1,12 @@
 package com.step.aqa.maven.project.dao.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 
 public class Diseases {
     @Id
+
     private int id;
     @Column(name = "Name")
     private String name;

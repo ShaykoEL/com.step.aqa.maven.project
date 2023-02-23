@@ -9,7 +9,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class APITestExample {
+public class APITestExample extends BaseRestAPIClass{
 
     @Test
     public void verifySuccessStatusCode() throws Exception {

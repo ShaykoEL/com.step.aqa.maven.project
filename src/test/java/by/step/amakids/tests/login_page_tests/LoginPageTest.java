@@ -16,8 +16,7 @@ public class LoginPageTest extends BaseUITestsClass {
     @BeforeEach
     public void openLoginPage () throws InterruptedException {
         driver.navigate().to("https://logbook.itstep.org/");
-        Thread.sleep(5000);
-    }
+        }
 
     @Test
     public void verifyLoginInputVisibility () {
@@ -25,7 +24,7 @@ public class LoginPageTest extends BaseUITestsClass {
         String initialWrongLoginString = "qwerty";
         String initialPassword = "12345";
         String expectedErrormessage = "User not found";
-        LoginService = new LoginService(driver);
+        LoginService LoginService = new LoginService(driver);
         LoginService.getLoginPage().getLoginBlock().loginField.sendKeys(initialWrongLoginString);
         LoginService.getLoginPage().getLoginBlock().passwordField.sendKeys(initialPassword);
 
